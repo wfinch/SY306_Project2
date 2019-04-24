@@ -1,0 +1,56 @@
+/*
+Name:         MIDN Kevin D. Nguyen
+Alpha:        204572
+Course:       SY306
+*/
+body{
+background-color:#ffffb3;
+}
+div.headerContainer{
+	display: grid;
+	/* align-content: start; */
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto;
+	align-content: space-evenly;
+	justify-content: space-evenly;
+}
+div.fixedHeader{
+	font-family: "Showcard Gothic";
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+  background-color:#808080;
+	border-bottom: 3px solid #ff6666;
+	z-index:100;
+}
+.spacer{
+	height: 150px;
+	width:100%;
+}
+div.introContainer{
+	margin:auto;
+	display:grid;
+	width:75%;
+	padding:0px 10px 0px;
+	grid-template-columns:1fr;
+	text-align:center;
+	background-color:#808080;
+	color: white;
+	border:4px solid #ff6666;
+}
+div.intro{
+	text-align:center;
+	background-color: black;
+	color: white;
+	padding: 10px 10px 10px 10px;
+}
+
+div.signupform{
+	margin:auto;
+	display:block;
+	background-color:#808080;
+	width:33%;
+	text-align:center;
+	padding:20px 0px 20px;
+}

@@ -1,0 +1,95 @@
+<!--
+Names:        MIDN Kevin Nguyen
+              MIDN Walt Finch
+              MIDN Maggie Madigan
+              MIDN Frederick Bleakley
+Course:       SY306
+Description:  Project 01
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mid Yak</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+
+  <body>
+    <div class="fixedHeader">
+			<!-- Insert javascript changinig welcome message here emom -->
+			<h1 id="greeting" style="color:#ff6666;text-align:center;">Welcome to MidYak</h1>
+			<script>
+					const time = new Date();
+					var minute = time.getMinutes();
+					if(minute%2 == 0){
+						document.getElementById("greeting").innerHTML = "What happens on the Yak, stays on the Yak";
+					}
+			</script>
+      <div class="headerContainer">
+        <div><h3><a href="default.html" style="color:#ffffb3;">Home</a></h3></div>
+        <div>
+          <h3><a href="signup.html" style="color:#ffffb3;">Signup</a></h3>
+        </div>
+        <div>
+          <h3><a href="login.html" style="color:#ffffb3;">Login</a></h3>
+        </div>
+        <div><h3><a href="messageboard.py" style="color:#ffffb3;">Message Board</a></h3></div>
+      </div>
+		</div>
+    <div class="spacer">
+      hello;
+    </div>
+    <div class="introContainer">
+      <div class="introHeader">
+        <h2 style="text-decoration:underline;">Who we are</h2>
+      </div>
+      <div class="para">
+        <p style="font-size:125%;">Our mission is to create a platform where midshipmen feel comfortable expressing themselves anonomously
+          and can blow off steam.  A place where you can feel welcome no matter what is happening in the hall.  An experience that leaves
+          you smiling and feeling like your day just got 20 times better.  Everything is stored securely hear so you don't have to fear the
+          man, just make sure your username is relatively anonomous and you don't post any personally identifiable information.  The creators
+          of this site are fearless and will never cooperate with the system.  </p>
+      </div>
+    </div>
+
+
+
+<!--
+    <div class="centered">
+      <h2> LEGAL DISCLAIMER: </h2>
+      <p>
+        None of the content within this web site or the web sites of the members of this course are intended for distribution in any way, shape, or form. Nor is any attempt being made to disrupt the profiting capability of the copyright holders. The contents of this web site and the web sites of the members of this course are solely intended for educational use of the students and the instructor. All content herein is included strictly for the demonstration of implemented course objectives.
+      </p>
+    </div>
+
+
+
+
+
+
+ -->
+
+    <!-- ***************************************************************
+       Below this point is text you should include on every SY306 page
+       *************************************************************** -->
+    <!-- Below are scripts which create a button you can click on to validate your page.
+         The background will load green or red if the HTML is valid or not.
+         The time at which the page was last modified will also be displayed below the button -->
+
+
+    <link href="http://courses.cyber.usna.edu/SY306/docs/check.css" rel="stylesheet">
+
+    <script>
+      document.write('<div id="response"><a href="http://csmidn.academy.usna.edu:8888/?showsource=yes&doc=' + document.location + '">' +
+                 '<img src="http://courses.cyber.usna.edu/SY306/docs/check.py"' + 'alt="HTML Check" height="60" />' +
+                 '</a><div id="time"></div></div>');
+    </script>
+    <script src="http://courses.cyber.usna.edu/SY306/docs/time.js" ></script>
+
+
+
+  </body>
+</html>

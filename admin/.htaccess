@@ -1,0 +1,4 @@
+AuthUserFile /home/mids/m201842/public_html/.htpasswd
+AuthType Basic
+AuthName "Restricted page for admin"
+Require valid-user

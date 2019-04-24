@@ -1,0 +1,53 @@
+<!--
+Names:        MIDN Kevin Nguyen
+              MIDN Walt Finch
+              MIDN Maggie Madigan
+              MIDN Frederick Bleakley
+Course:       SY306
+Description:  Project 01
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mid Yak</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+
+  <body>
+    <div class="fixedHeader">
+			<!-- Insert javascript changinig welcome message here emom -->
+			<h1 id="greeting" style="color:#ff6666;text-align:center;">Welcome to MidYak</h1>
+			<script>
+					const time = new Date();
+					var minute = time.getMinutes();
+					if(minute%2 == 0){
+						document.getElementById("greeting").innerHTML = "What happens on the Yak, stays on the Yak";
+					}
+			</script>
+      <div class="headerContainer">
+        <div><h3><a href="default.html" style="color:#ffffb3;">Home</a></h3></div>
+        <div>
+          <h3><a href="signup.html" style="color:#ffffb3;">Signup</a></h3>
+        </div>
+        <div>
+          <h3><a href="login.html" style="color:#ffffb3;">Login</a></h3>
+        </div>
+        <div><h3><a href="messageboard.py" style="color:#ffffb3;">Message Board</a></h3></div>
+      </div>
+		</div>
+    <div class="spacer">
+      hello;
+    </div>
+    <div class="signupform">
+      <form action="login.py" method="post" style="color:black">
+        <div id="username">Username: <input type="text" name="username" id="username"></div><br>
+        <div id="password">Password: <input type="password" id="password" name="password"></div><br>
+        <input type="submit" value="Submit"> <input type="reset" value="Clear Form">
+      </form>
+    </div>
+  </body>
+</html>

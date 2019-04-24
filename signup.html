@@ -1,0 +1,167 @@
+<!--
+Names:        MIDN Kevin Nguyen
+              MIDN Walt Finch
+              MIDN Maggie Madigan
+              MIDN Frederick Bleakley
+Course:       SY306
+Description:  Project 01
+
+--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mid Yak</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+      // Remember if I am displaying the error message so it can be removed if corrected when they come back to it.
+      // var displayingPWError = false;
+      // var displayingPW2Error = false;
+      // var displayingUSNAEmailError = false;
+      // var displayingFirstNameError = false;
+      // //This function checks that the password is of the correct length, and that it has at least one number.
+      // function checkpassword(){
+      //   var good=false;
+      //   var password = document.getElementById('password').value;
+      //   if(password.length>=6){
+      //     for(var x=0; x<password.length; x++){
+      //       if(!isNaN(parseInt(password.charAt(x)))){
+      //         // Set good to be true, remove the styling and notice saying it isn't filled out correctly, and then put back the value that the user had entered that worked.
+      //         good=true;
+      //         var error=document.getElementById('password');
+      //         // Modify the inner HTML of the div tag so that there is no error message anymore, and now there is just the form item.
+      //         error.innerHTML = 'Password: <input type="password" name="password" id="password" onblur="checkpassword()">';
+      //         error.style="";		// Removes the yellow and red styling that made it clear there was an error.
+      //         document.getElementById('password').value = password;		// Puts the value the user had entered into the form that I just placed.
+      //         displayingPWError=false;		// Remember that we are not currently outputing the error message so that it knows to put one there next time it is wrong.
+      //         return true;		// Return true that the password is correct so we can check that onsubmit later on.
+      //       }
+      //     }
+      //   }
+      //   if(good==false && displayingPWError==false){
+      //     var error = document.getElementById('password');
+      //     // Appends to the innerHTML making it come after the form the message stating the password requirements.
+      //     error.innerHTML += "  Password must be 6 characters long and have at least one number.";
+      //     error.style="color:red;background:yellow;";		// Sets the styling to make it obvious there is now an error.
+      //     // Need to save that we are displaing the pw error, and return false.
+      //     displayingPWError=true;
+      //     return false;		// Return false that the password is incorrecct so we can check that later on with the onsubmit.
+      //   }
+      // }
+
+      // All of my form checking functions incorporate the exact same strategy and techniques as in the above function.  Explaining it in the future ones is too much and clutters the code
+      // so please refer to that function to explain the other onoes.  I will explain any functions that are wildly different.
+
+      // Checks to see if the second password, or the authentication password, matches the first password.
+      // if it doesn't match, return false, if it does return true.  If it doesn't match output an appropriate error message.
+      // function checkPassword2(){
+      //   var good=false;
+      //   var password2 = document.getElementById('password2').value;
+      //   var password1 = document.getElementById('password').value;
+      //   if(password2==password1){
+      //       good=true;
+      //       var error=document.getElementById('password2');
+      //       error.innerHTML = 'Authenticate Password: <input type="password" id="password2" name="password2" onblur="checkpassword2()">';
+      //       error.style="";
+      //       document.getElementById('password2').value = password2;
+      //       displayingPW2Error=false;
+      //       return true;
+      //     }
+      //   if(good==false && displayingPW2Error==false){
+      //     var error = document.getElementById('password2');
+      //     error.innerHTML += "  Passwords must match in order to authenticate";
+      //     error.style="color:red;background:yellow;";
+      //     displayingPW2Error=true;
+      //     return false;
+      //   }
+      // }
+      // // Checks that the first name has something entered.
+      // function checkname(){
+      //   var good=false;
+      //   var name=document.getElementById('name').value;
+      //   if(name.length>0){
+      //     good=true;
+      //     var error=document.getElementById('nameError');
+      //     error.innerHTML='Name: <input type="text" name="name" id="name" required onblur="checkname()">';
+      //     document.getElementById('name').value = name;
+      //     error.style="";
+      //     displayingNameError = false;
+      //     return true;
+      //   }
+      //   if(good==false && displayingNameError==false){
+      //     var error=document.getElementById('nameError');
+      //     error.innerHTML += " Name is Required";
+      //     error.style= "color:red;background:yellow;";
+      //     displayingFirstNameError=true;
+      //     return false;
+      //   }
+      // }
+      // // Checks the bio for any < and replaces them as per the instructions.
+      // // This is my textarea modification one.  It works by getting the value, modifying it, the putting it back in the area.
+      // function fixBio(){
+      //   var bio = document.getElementById('bio').value;
+      //   bio = bio.replace("<", "&lt;");
+      //   document.getElementById('bio').value = bio;
+      // }
+      // function checkForParameters(){
+      //   // Check all of the required parts before comparing so that it will show the messages if theyre all messed up or which ones are messed up.
+      //   pw = checkPassword();
+      //   pwAuthenticate = checkPassword2();
+      //   name = checkname();
+      //   username = checkusername();
+      //   //Compare the things to make sure everything is good to go
+      //   if(pw && pwAuthenticate  && name && username){
+      //     return true;
+      //   }
+      //   else{
+      //     // return false if they're not good to go
+      //     return false;
+      //   }
+      // }
+    </script>
+
+
+  </head>
+
+  <body>
+    <div class="fixedHeader">
+			<!-- Insert javascript changinig welcome message here emom -->
+			<h1 id="greeting" style="color:#ff6666;text-align:center;">Welcome to MidYak</h1>
+			<script>
+					const time = new Date();
+					var minute = time.getMinutes();
+					if(minute%2 == 0){
+						document.getElementById("greeting").innerHTML = "What happens on the Yak, stays on the Yak";
+					}
+			</script>
+      <div class="headerContainer">
+        <div><h3><a href="default.html" style="color:#ffffb3;">Home</a></h3></div>
+        <div>
+          <h3><a href="signup.html" style="color:#ffffb3;">Signup</a></h3>
+        </div>
+        <div>
+          <h3><a href="login.html" style="color:#ffffb3;">Login</a></h3>
+        </div>
+        <div><h3><a href="messageBoard.html" style="color:#ffffb3;">Message Board</a></h3></div>
+      </div>
+		</div>
+    <div class="spacer">
+      hello;
+    </div>
+
+    <div class="signupform">
+      <form action="process_signup_validate.py" method="post" style="color:black">
+        <div id="name">Name: <input type="text" name="name" id="name"></div><br>
+        <div id="username">Username: <input type="text" name="username" id="username"></div><br>
+        <div id="password">Password: <input type="password" id="password" name="password"></div><br>
+        <div id="password2">Confirm Password: <input type="password" name="password2" id="password2""</div><br><br>
+        <input type="submit" value="Submit"> <input type="reset" value="Clear Form">
+      </form>
+    </div>
+
+
+
+
+
+  </body>
+</html>

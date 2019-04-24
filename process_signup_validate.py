@@ -55,6 +55,7 @@ if password == password2 && len(name)>0 && len(username)>0:
         ''')
 
     else:
+	# Project 2 Msg Board Defense
 	#hash the password before adding to the database
 	hashedPassword = hashlib.md5(password.encode())
 	#Escape any < or > in the username or name

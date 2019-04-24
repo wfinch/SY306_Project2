@@ -61,7 +61,9 @@ if password == password2 && len(name)>0 && len(username)>0:
         username = re.escape(username)
 	name = re.escape(name)	
         #add the user to the database
-        cursor.execute("INSERT INTO Users VALUES ("+username+","+ name+","+ hashedPassword")")
+	query = "INSERT INTO Users(username, name, password) values (%s, %s, %s)"
+	cursor.execute(query,(username, name, hashedPassword)       
+
 
         #redirects to the message board
         print("Content-Type: text/html")

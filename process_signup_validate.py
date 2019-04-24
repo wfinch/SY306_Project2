@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import re
 import cgi
 import cgitb
 from http import cookies
@@ -57,6 +57,9 @@ if password == password2 && len(name)>0 && len(username)>0:
     else:
 	#hash the password before adding to the database
 	hashedPassword = hashlib.md5(password.encode())
+	#Escape any < or > in the username or name
+        username = re.escape(username)
+	name = re.escape(name)	
         #add the user to the database
         cursor.execute("INSERT INTO Users VALUES ("+username+","+ name+","+ hashedPassword")")
 

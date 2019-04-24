@@ -6,7 +6,7 @@ from http import cookies
 import urllib.parse
 import mysql.connector
 from mysql.connector import errorcode
-
+import hashlib
 
 cgitb.enable() #provides additional security by not revealing innerworkings of code to the outside
 
@@ -55,8 +55,10 @@ if password == password2 && len(name)>0 && len(username)>0:
         ''')
 
     else:
+	#hash the password before adding to the database
+	hashedPassword = hashlib.md5(password.encode())
         #add the user to the database
-        cursor.execute("INSERT INTO Users VALUES (username, name, password)")
+        cursor.execute("INSERT INTO Users VALUES ("+username+","+ name+","+ hashedPassword")")
 
         #redirects to the message board
         print("Content-Type: text/html")
